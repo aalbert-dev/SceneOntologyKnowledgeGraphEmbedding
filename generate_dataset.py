@@ -161,6 +161,7 @@ even if they are not included or are empty.
 """
 def export_data_for_training(downsampling):
     print("Exporting datasets for training.")
+    max_test = 2000
     keys = dataset_1.keys()
     train_1, test_1, valid_1 = "", "", ""
     relationship_count = 0
@@ -170,12 +171,13 @@ def export_data_for_training(downsampling):
                 c = random.randint(0, 10)
                 h, r, t = rel
                 s = get_triple_as_string(h, r, t)
-                if c < 7:
+                if c < 8:
                     train_1 += s
                 elif c < 9:
-                    test_1 += s
-                else:
                     valid_1 += s
+                else:
+                    if len(test_1.split("\n")) < max_test:
+                        test_1 += s
             relationship_count += 1
     write_datasets(train_1, test_1, valid_1, 1)
 
@@ -188,12 +190,13 @@ def export_data_for_training(downsampling):
                 c = random.randint(0, 10)
                 h, r, t = rel
                 s = get_triple_as_string(h, r, t)
-                if c < 7:
+                if c < 8:
                     train_2 += s
                 elif c < 9:
-                    test_2 += s
-                else:
                     valid_2 += s
+                else:
+                    if len(test_2.split("\n")) < max_test:
+                        test_2 += s
             relationship_count += 1
     write_datasets(train_2, test_2, valid_2, 2)
 
@@ -206,12 +209,13 @@ def export_data_for_training(downsampling):
                 c = random.randint(0, 10)
                 h, r, t = rel
                 s = get_triple_as_string(h, r, t)
-                if c < 7:
+                if c < 8:
                     train_3 += s
                 elif c < 9:
-                    test_3 += s
-                else:
                     valid_3 += s
+                else:
+                    if len(test_3.split("\n")) < max_test:
+                        test_3 += s
             relationship_count += 1
     write_datasets(train_3, test_3, valid_3, 3)
     print("Done.")
@@ -225,4 +229,4 @@ dataset_3 = {}
 import_datasets(True, True, True)
 
 # Export data downsampled by 100x for training, test, and validation
-export_data_for_training(100)
+export_data_for_training(50)
