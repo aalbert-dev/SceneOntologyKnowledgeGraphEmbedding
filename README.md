@@ -2,7 +2,7 @@
 Applies knowledge graph embedding techniques to the visual genome scene ontology data set for semantic scene understanding.
 
 
-### Instructions that are also a bash script
+## Instructions that are also a bash script
 echo "Starting setup."
 mkdir ~/Desktop/ad_kge
 cd ~/Desktop/ad_kge
