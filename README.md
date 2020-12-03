@@ -1,13 +1,12 @@
 # SceneOntologyKnowledgeGraphEmbedding
 Applies knowledge graph embedding techniques to the visual genome scene ontology data set for semantic scene understanding.
-# author Arjun Albert
-# email aalbert@mit.edu
+
+
+### Instructions that are also a bash script
 echo "Starting setup."
 mkdir ~/Desktop/ad_kge
 cd ~/Desktop/ad_kge
 
-
-### Instructions that are also a bash script
 read "Ctrl + C if you don't want to download py2kg env. Press [Enter] if you would like to continue."
 
 conda create --name pykg2vec python=3.6
