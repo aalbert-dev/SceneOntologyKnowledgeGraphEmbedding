@@ -32,7 +32,7 @@ Return the model and model configuration objects.
 def get_model_and_config(ags):
     config_def, model_def = Importer().import_model_config(ags.model_name.lower())
     c = config_def(ags)
-    # c.epochs = 10
+    c.epochs = 10
     m = model_def(**c.__dict__)
     return c, m
 
