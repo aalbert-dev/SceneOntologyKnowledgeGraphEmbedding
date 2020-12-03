@@ -7,8 +7,11 @@ Generate training, test, and validation datasets from Visual Genome scene ontolo
 ### Train Scene Ontology Knowledge Graph Embedding (ad_kge_train.py)
 Run designated model on autonomous driving scene visual genome ontology datasets.
 
+### Run All Models (run_all_models.sh)
+Generate knowledge graph from a valid dataset, train TransE, TransH, Rescal, HoLE knowledge graph embedding algorithms, and produce plots and results. 
 
-## Instructions that are also a bash script
+
+## Install Instructions that are also a bash script
 <pre><code>
 echo "Starting setup."
 mkdir ~/Desktop/ad_kge
