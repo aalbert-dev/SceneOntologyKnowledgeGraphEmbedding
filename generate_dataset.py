@@ -185,7 +185,7 @@ def export_data_for_training(downsampling):
     for key in keys:
         for rel in dataset_2[key]:
             if relationship_count % downsampling == 0:
-                c = random.randint(0, 2)
+                c = random.randint(0, 10)
                 h, r, t = rel
                 s = get_triple_as_string(h, r, t)
                 if c < 7:
@@ -203,7 +203,7 @@ def export_data_for_training(downsampling):
     for key in keys:
         for rel in dataset_3[key]:
             if relationship_count % downsampling == 0:
-                c = random.randint(0, 2)
+                c = random.randint(0, 10)
                 h, r, t = rel
                 s = get_triple_as_string(h, r, t)
                 if c < 7:
