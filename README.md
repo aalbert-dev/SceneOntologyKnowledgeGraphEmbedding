@@ -73,6 +73,7 @@ $ echo "Structure should be as follows:
     /scenes/
         /relationships_x.json
     generate_dataset.py"
+    
 read "Press [Enter] if you would like to continue."
 echo "Then cd to ad_kge and run run_all_models.sh"
 echo "This will build all the scene data and train four different knowledge graph embedding models on two sets of autonomous driving data."
