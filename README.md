@@ -10,6 +10,14 @@ Run designated model on autonomous driving scene visual genome ontology datasets
 ### Run All Models (run_all_models.sh)
 Generate knowledge graph from a valid dataset, train TransE, TransH, Rescal, HoLE knowledge graph embedding algorithms, and produce plots and results. 
 
+## Dependencies and Requirements
+* Python 
+* Pip
+* Github
+* Pytorch
+* Anaconda
+* pykg2vec
+_Follow instructions to install these repos or use the install script_ 
 
 ## Install Instructions that are also a bash script
 <pre><code>
