@@ -1,11 +1,11 @@
 # SceneOntologyKnowledgeGraphEmbedding
-Applies knowledge graph embedding techniques to the visual genome scene ontology data set for semantic scene understanding.
+Applies knowledge graph embedding techniques to the visual genome scene ontology data set for scene semantic understanding.
 
 ### Generate Dataset(generate_dataset.py)
 Generate training, test, and validation datasets from Visual Genome scene ontology dataset for knowledge graph embedding for scene semantic understanding.
 
 ### Train Scene Ontology Knowledge Graph Embedding (ad_kge_train.py)
-Run designated model on autonomous driving scene ontology datasets. Designed for the visual genome dataset to run knowledge graph embeddings on for scene semantic understanding.
+Run designated model on autonomous driving scene visual genome ontology datasets.
 
 
 ## Instructions that are also a bash script
