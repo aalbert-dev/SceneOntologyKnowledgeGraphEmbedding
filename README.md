@@ -36,8 +36,8 @@ echo "test install using: train TransE using benchmark dataset fb15k"
 echo "Download the 3 datasets from: https://visualgenome.org/api/v0/api_home.html"
 echo "Place them in a folder called: scenes"
 echo "Remember: x for 1, 2, 3"
-echo "Rename them: relationships_x.json"
-echo "Structure should be as follows: 
+$ echo "Rename them: relationships_x.json"
+$ echo "Structure should be as follows: 
 /ad_kge/
     /examples/
         ad_kge_train.py
