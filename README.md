@@ -3,6 +3,7 @@ Applies knowledge graph embedding techniques to the visual genome scene ontology
 
 
 ## Instructions that are also a bash script
+<pre><code>
 echo "Starting setup."
 mkdir ~/Desktop/ad_kge
 cd ~/Desktop/ad_kge
@@ -57,3 +58,4 @@ $ echo "Structure should be as follows:
 read "Press [Enter] if you would like to continue."
 echo "Then cd to ad_kge and run run_all_models.sh"
 echo "This will build all the scene data and train four different knowledge graph embedding models on two sets of autonomous driving data."
+<code><pre>
