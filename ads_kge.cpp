@@ -94,7 +94,5 @@ int main()
     define_relationships(); 
 
     labelledAdjacencyGraph non_embedded_graph = form_knowledge_graph();
-
-    labelledAdjacencyGraph embedded_graph = embed_knowledge_graph(non_embedded_graph);
     return 1;
 }
