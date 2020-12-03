@@ -159,9 +159,9 @@ Gather triples from memory and then writeout each dataset.
 Will overwrite previously filled out datasets with new datasets 
 even if they are not included or are empty.
 """
-def export_data_for_training(downsampling):
+def export_data_for_training(downsampling, testing_limit):
     print("Exporting datasets for training.")
-    max_test = 2000
+    max_test = testing_limit
     keys = dataset_1.keys()
     train_1, test_1, valid_1 = "", "", ""
     relationship_count = 0
@@ -174,7 +174,8 @@ def export_data_for_training(downsampling):
                 if c < 8:
                     train_1 += s
                 elif c < 9:
-                    valid_1 += s
+                    if len(valid_1.split("\n")) < max_test:
+                        valid_1 += s
                 else:
                     if len(test_1.split("\n")) < max_test:
                         test_1 += s
@@ -193,7 +194,8 @@ def export_data_for_training(downsampling):
                 if c < 8:
                     train_2 += s
                 elif c < 9:
-                    valid_2 += s
+                    if len(valid_2.split("\n")) < max_test:
+                        valid_2 += s
                 else:
                     if len(test_2.split("\n")) < max_test:
                         test_2 += s
@@ -212,7 +214,8 @@ def export_data_for_training(downsampling):
                 if c < 8:
                     train_3 += s
                 elif c < 9:
-                    valid_3 += s
+                    if len(valid_3.split("\n")) < max_test:
+                        valid_3 += s
                 else:
                     if len(test_3.split("\n")) < max_test:
                         test_3 += s
@@ -229,4 +232,5 @@ dataset_3 = {}
 import_datasets(True, True, True)
 
 # Export data downsampled by 100x for training, test, and validation
-export_data_for_training(50)
+# Set a max length of 4000 relations each for testing and validation
+export_data_for_training(50, 4000)
